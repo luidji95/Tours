@@ -26,7 +26,9 @@ function App() {
     fetchData();
   }, [])
  
-  
+  const notInterested = (id) => {
+    setTours(tours.filter((tour) => tour.id !== id));
+  };
 
   return (
     <div className="app">
